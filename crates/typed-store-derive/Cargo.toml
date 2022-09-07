@@ -17,7 +17,7 @@ fdlimit = "0.2.1"
 pre = "0.2.0"
 proc-macro2 = "1.0.24"
 quote = "1.0.9"
-rocksdb = { version = "0.19.0", features = ["snappy", "lz4", "zstd", "zlib", "multi-threaded-cf"], default-features = false }
+rocksdb = { version = "0.17.0", features = ["snappy", "lz4", "zstd", "zlib", "multi-threaded-cf"], default-features = false }
 syn = { version = "1.0.64", features = ["derive"] }
 tempfile = "3.3.0"
 tokio = { version = "1.20.0", features = ["sync", "macros", "rt"] }

@@ -580,13 +580,10 @@ pub fn open_cf_opts_secondary<P: AsRef<Path>>(
         options.create_if_missing(true);
         options.create_missing_column_families(true);
         Arc::new(
-            rocksdb::DBWithThreadMode::<MultiThreaded>::open_cf_descriptors_as_secondary(
+            rocksdb::DBWithThreadMode::<MultiThreaded>::open_as_secondary(
                 &options,
                 &primary_path,
                 &secondary_path,
-                opt_cfs
-                    .iter()
-                    .map(|(name, opts)| ColumnFamilyDescriptor::new(*name, (*opts).clone())),
             )?,
         )
     };
